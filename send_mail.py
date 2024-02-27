@@ -4,8 +4,9 @@ from os import getenv
 from dotenv import load_dotenv
 
 
+load_dotenv()
+
 def send_email(message):
-    load_dotenv()
     mail_addr = "blushedn@gmail.com"
     with SMTP_SSL("smtp.gmail.com", 
                   context=create_default_context()) as server:
