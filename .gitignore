@@ -1,2 +1,4 @@
 ShowCase Website.code-workspace
 tests.py
+.env
+__pycache__

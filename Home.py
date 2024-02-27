@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+from pandas import read_csv
 
 st.set_page_config(layout='wide')
 
@@ -18,13 +18,13 @@ st.write('Below you can find some of the apps I have built in Python. Feel free 
 st.divider()
 
 col3, col4 = st.columns(2)
-df = pd.read_csv("data.csv", sep=';')
+df = read_csv("data.csv", sep=';')
 with col3:
     for index, row in df.iterrows():
         st.subheader(row['title'])
         st.write(row['description'])
         st.image(f"images\{row['image']}", width=600)
-        st.page_link(row['url'], label='Source code')
+        st.page_link(row['url'], label=':blue[Source code]')
         if index + 1 == len(df)/2:
             break 
 with col4:
@@ -33,4 +33,4 @@ with col4:
             st.subheader(row['title'])
             st.write(row['description'])
             st.image(f"images\{row['image']}", width=600)
-            st.page_link(row['url'], label='Source code')
+            st.page_link(row['url'], label=':blue[Source code]')
