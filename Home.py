@@ -8,7 +8,7 @@ st.set_page_config(layout='wide')
 # Set 2 columns for user info
 col1, col2  = st.columns(2)
 with col1:
-    st.image('images\\photo.jpg')
+    st.image('images\\photo.jpg', width=500)
 with col2:
     st.title('BlushedNanis')
     content = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus quam sed magna convallis posuere. Morbi eu tempus justo. Ut tristique orci a ipsum imperdiet, 
