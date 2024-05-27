@@ -9,6 +9,7 @@ The projects are loaded from a csv file, where you can add your projects in the 
 
 ### How to use?
 
+* Install requirements.txt
 * Create a *.env* file in the root directory of the project and set the following variables:
   * *pypass*: Gmail app password
   * *email*: Gmail address, which will serve as sender and receiver.
